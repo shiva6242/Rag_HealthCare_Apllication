@@ -5,7 +5,7 @@ A **Retrieval-Augmented Generation (RAG)** based healthcare assistant that answe
 ---
 
 ## 🚀 Live Demo
-🔗 https://YOUR_STREAMLIT_APP_LINK_HERE
+🔗 https://raghealthcareapllication.streamlit.app/
 
 ---
 
