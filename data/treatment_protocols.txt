@@ -1,0 +1,26 @@
+Treatment Protocols
+
+Treatment protocols are standardized medical procedures designed to ensure
+consistent and effective patient care.
+
+Diabetes Treatment Protocol:
+Diabetes management includes blood glucose monitoring, insulin therapy,
+oral antidiabetic medications, dietary modifications, and regular physical activity.
+Patients are advised to monitor blood sugar levels daily and attend routine check-ups.
+
+Hypertension Treatment Protocol:
+Hypertension is managed through lifestyle changes such as reduced salt intake,
+weight management, regular exercise, and antihypertensive medications.
+Blood pressure should be monitored frequently.
+
+Respiratory Infections Treatment:
+Respiratory infections are treated based on severity. Mild cases require rest
+and hydration, while severe cases may require antibiotics or antiviral therapy.
+
+Post-Surgical Care:
+Post-surgical patients must be monitored for infection, pain, and wound healing.
+Follow-up visits are essential for recovery assessment.
+
+Mental Health Treatment:
+Mental health conditions are treated using counseling, therapy sessions,
+medications, and patient support programs.

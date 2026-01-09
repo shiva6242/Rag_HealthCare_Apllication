@@ -1,0 +1,27 @@
+Hospital Policies and Procedures
+
+This document outlines the general policies followed in hospitals to ensure patient safety,
+quality healthcare delivery, and ethical medical practices.
+
+Patient Admission Policy:
+Patients are admitted based on medical necessity, physician recommendation, and availability
+of hospital resources. Emergency cases receive immediate priority. All patients must provide
+valid identification and insurance details during admission.
+
+Infection Control Policy:
+Hospitals follow strict infection control measures including regular hand hygiene,
+use of personal protective equipment (PPE), sterilization of medical instruments,
+and isolation of infectious patients when required.
+
+Medication Administration Policy:
+Medications must be administered only by authorized healthcare professionals.
+Dosage, timing, and route of administration must strictly follow physician orders.
+Any medication errors must be reported immediately.
+
+Patient Confidentiality:
+All patient records are confidential and protected under healthcare privacy laws.
+Access to patient information is restricted to authorized personnel only.
+
+Discharge Policy:
+Patients are discharged after physician approval. Discharge instructions include
+medication guidance, follow-up appointments, and lifestyle recommendations.
