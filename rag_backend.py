@@ -4,7 +4,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 # ---------- GEMINI ----------
-client = genai.Client(api_key="AIzaSyBOI9LdpF75tZbf95qH98FTF7eJo4udQUg")
+client = genai.Client(api_key="AIzaSyAwjwLjLsZDFvg1Oze20vyIU__jHNTnv-0")
 
 # ---------- EMBEDDINGS ----------
 embeddings = HuggingFaceEmbeddings(
@@ -32,7 +32,7 @@ Formatting rules (VERY IMPORTANT):
 - Each point MUST be on a separate line with a blank line between points.
 - number the points.
 - Do NOT use labels like "Symptom_1" or "Precaution_1".
-- For symptoms or precautions, explain each in its own sentence.
+- For symptoms or precautions, explain each in its own paragraph.
 
 If the answer is not found in the context, reply exactly:
 "I don't know. Information not available in the documents."
