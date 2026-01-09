@@ -17,13 +17,24 @@ vectorstore = Chroma(
     embedding_function=embeddings
 )
 
-retriever = vectorstore.as_retriever(search_kwargs={"k": 3})
+retriever = vectorstore.as_retriever(search_type="similarity",search_kwargs={"k": 3})
 
 def ask_gemini(context, question):
     prompt = f"""
-You are a healthcare assistant.
-Answer ONLY using the context below.
-If the answer is not present, say:
+You are a professional healthcare AI assistant.
+
+Answer the question ONLY using the information from the context below.
+Do NOT add medical facts outside the context.
+
+Formatting rules (VERY IMPORTANT):
+- Give ONLY 2 to 3 key points.
+- Each point must be written as a short paragraph (1–2 sentences).
+- Each point MUST be on a separate line with a blank line between points.
+- number the points.
+- Do NOT use labels like "Symptom_1" or "Precaution_1".
+- For symptoms or precautions, explain each in its own sentence.
+
+If the answer is not found in the context, reply exactly:
 "I don't know. Information not available in the documents."
 
 Context:
@@ -34,11 +45,15 @@ Question:
 
 Answer:
 """
+
     response = client.models.generate_content(
-        model="models/gemma-3-1b-it",
+        model="models/gemini-2.5-flash",
         contents=prompt
     )
-    return response.text
+
+    text = response.text
+
+    return text
 
 def rag_pipeline(question):
     docs = retriever.invoke(question)
