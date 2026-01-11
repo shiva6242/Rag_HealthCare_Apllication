@@ -1,10 +1,11 @@
-
+import os
 from google import genai
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
 # ---------- GEMINI ----------
-client = genai.Client(api_key="AIzaSyAwjwLjLsZDFvg1Oze20vyIU__jHNTnv-0")
+API_KEY = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=API_KEY)
 
 # ---------- EMBEDDINGS ----------
 embeddings = HuggingFaceEmbeddings(
@@ -17,7 +18,10 @@ vectorstore = Chroma(
     embedding_function=embeddings
 )
 
-retriever = vectorstore.as_retriever(search_type="similarity",search_kwargs={"k": 3})
+retriever = vectorstore.as_retriever(
+    search_type="similarity",
+    search_kwargs={"k": 3}
+)
 
 def ask_gemini(context, question):
     prompt = f"""
@@ -30,9 +34,8 @@ Formatting rules (VERY IMPORTANT):
 - Give ONLY 2 to 3 key points.
 - Each point must be written as a short paragraph (1–2 sentences).
 - Each point MUST be on a separate line with a blank line between points.
-- number the points.
+- Number the points.
 - Do NOT use labels like "Symptom_1" or "Precaution_1".
-- For symptoms or precautions, explain each in its own paragraph.
 
 If the answer is not found in the context, reply exactly:
 "I don't know. Information not available in the documents."
@@ -51,9 +54,8 @@ Answer:
         contents=prompt
     )
 
-    text = response.text
+    return response.text
 
-    return text
 
 def rag_pipeline(question):
     docs = retriever.invoke(question)
